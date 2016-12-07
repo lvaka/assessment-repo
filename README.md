@@ -1,4 +1,4 @@
-# Frontend Coding Challenge
+# Frontend Coding Challenge (JS)
 
 Please review the provided materials and complete the given user stories.
 
