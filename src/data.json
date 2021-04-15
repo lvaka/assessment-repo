@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Wonder Woman 1984",
+    "image": "assets/474bedac-a2cc-466c-8133-aaadefece01f.jpg",
+    "releaseDate": "2020-12-25"
+  },
+  {
+    "title": "Raya and The Last Dragon",
+    "image": "assets/22c3ab61-b73f-455e-95d0-1ba6156307b6.jpg",
+    "releaseDate": "2021-03-05"
+  },
+  {
+    "title": "Shrek 2",
+    "image": "assets/182eae84-827d-4330-8222-688fe77e516d.jpg",
+    "releaseDate": "2004-05-18"
+  },
+  {
+    "title": "How to Train Your Dragon: The Hidden World",
+    "image": "assets/9bf7e81c-9f73-45a1-96fb-0129a799e2c0.jpg",
+    "releaseDate": "2019-02-02"
+  },
+  {
+    "title": "Kingsman: The Secret Service",
+    "image": "assets/bccc6601-d468-4b73-9a8e-f407bd0be191.jpg",
+    "releaseDate": "2015-02-13"
+  },
+  {
+    "title": "Colossal",
+    "image": "assets/e44e381b-c016-4fae-9361-690552e328f3.jpg",
+    "releaseDate": "2017-04-07"
+  },
+  {
+    "title": "Citizen Kane",
+    "image": "assets/b34dd658-6033-48bf-a6c1-d60f75458d51.jpg",
+    "releaseDate": "1941-05-01"
+  },
+  {
+    "title": "Jaws",
+    "image": "assets/3f2f72c0-6820-413f-a347-173d330d27ed.jpg",
+    "releaseDate": "1975-06-20"
+  },
+  {
+    "title": "Godzilla Vs. Kong",
+    "image": "assets/47f7d881-1d91-4fb8-bcf9-806b7f2a477d.jpg",
+    "releaseDate": "2020-11-20"
+  },
+  {
+    "title": "Trolls",
+    "image": "assets/b4d369b0-c3fb-4097-8520-aef9ab3826ed.jpg",
+    "releaseDate": "2016-11-04"
+  },
+  {
+    "title": "Labyrinth",
+    "image": "assets/121fdd6d-be66-4c3a-ab32-d2102c95202b.jpg",
+    "releaseDate": "1986-06-27"
+  },
+  {
+    "title": "Marvel Studios' Avengers: Endgame",
+    "image": "assets/1d6c6c73-ab1e-4453-969c-6a4e965ebb37.jpg",
+    "releaseDate": "2019-04-26"
+  }
+]
