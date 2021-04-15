@@ -1,42 +1,56 @@
-# Frontend Coding Challenge (JS)
+# Web App Engineer Assessment
 
-Please review the provided materials and complete the given user stories.
+For this project, you will be building the Movie Box Art Grid feature for our fictional These 
+Movies Here site. This skeleton is built using CRA (Create React App), so make sure that you can 
+install and run the site before getting started. The mocks for the feature are available here 
+[https://zpl.io/2ZMq3Nw][https://zpl.io/2ZMq3Nw]. All information and assets should be available to 
+you via the Zeplin interface. Please take a moment to ensure that you can access the mocks.
 
-- [movie-list.png](movie-list.png)
-- [movie-detail.png](movie-detail.png)
-- [data.json](data.json)
+You will be completing User Stories for this new feature. Work will be assessed based 
+on completeness and quality of the individual users stories, not the number of stories completed.
 
-Feel free to use whatever libraries you're most comfortable with. The challenge will be judged base on both completion and quality. However, completion is not a requirement.
+You will have a 24-hour period to work through the stories, but you are only expected to spend 
+about 2 hours on the project. After the 24-hour period has expired, you will lose access to the 
+repository, therefore it is recommended that you commit changes to your repository often. 
 
-## User Stories
+Note on the mocks. They are there for guidance but feel free take the opportunity to add some of
+your personal flair. Transitions and animations are all fair game.  
 
-1. **As a user**,  
-I want to be able to search for movies by name
+## Box Art Grid Feature
 
-1. **As a user**,  
-I want to be able to sort movies by name and date—ascending and descending.
+These Movies Here users need to be able to see all the movies available to them. For this feature, 
+users should be presented with a grid of movies (or a list if on a smaller screen). Users should be 
+able to search this list of movies by title or release date. They should also be able to change the 
+sort view as well as add movies to a wishlist.
 
-1. **As a user**,  
-If there are more than five results  
-I want to see the number of results and pagination  
-(e.g. 1 - 5 of 16 results)
+- [ ] **As a user** [Must be completed first]
+  
+  I want to see a list of all the movies available in a grid on larger screens and as a list on 
+  smaller screens. I should have access to the name and release date of each movie in a hover over 
+  state when in a grid view and next to the box art in a list view.
 
-1. **As a user**,  
-If there are five or less results  
-I want to see the number of results without pagination  
-(e.g. 1 result)
+- [ ] **As a user**
 
-1. **As a user**,  
-I want to have a movie's release date formatted  
-(e.g. May 1, 2015)
+  I want to be able to sort the list of movies displayed by either release date or by title in 
+  ascending or descending order.
 
-1. **As a user**,  
-I want to have run time specified in hours and minutes.  
-(e.g. 1hr 21 mins)
+- [ ] **As a user**
 
-1. **As a user**,  
-Assuming I am logged in  
-I want to be able to toggle movies in my Watchlist
+  I want to be able to search the list of movies by either release date or title.
 
-1. **As a user**,  
-I want to be able to navigate to a movie detail page.
+- [ ] **As a user**
+  
+  I want to be able to add and remove titles from my wishlist of movies.
+
+
+- [ ] **As a user**
+  
+  I want to be able to change my view to only show movies added to my wishlist. I should also be 
+  able to search within this list.
+
+
+Please note that other than the required User Story, the rest can be finished in any order, but 
+when moving on to a new story, you must take into account any previously completed features. 
+For example, if you complete the sorting view feature, when you move on to search, the search 
+results should reflect the currently selected sort by view. Also, the user should be able to change 
+the sort view of the search results.  
