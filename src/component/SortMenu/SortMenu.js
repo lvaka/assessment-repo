@@ -3,6 +3,7 @@ import './sortMenu.scss'
 import useSetSort from './useSetSort'
 import useHandleActivate from './useHandleActivate'
 import useHandleHide from './useHandleHide'
+import useHandleSort from './useHandleSort'
 import PropTypes from 'prop-types'
 
 const SortMenu = ({ sortOrder, sortByReleaseDate, sortByTitle, showWishlist }) => {
@@ -14,7 +15,8 @@ const SortMenu = ({ sortOrder, sortByReleaseDate, sortByTitle, showWishlist }) =
     handleSortByDate,
     handleSortByTitle,
     handleFilterWishlist
-  } = useHandleHide({ active, setActive, sortOptionsRef, sortByReleaseDate, sortByTitle, showWishlist })
+  } = useHandleSort({ setActive, sortByReleaseDate, sortByTitle, showWishlist })
+  useHandleHide({ active, sortOptionsRef })
 
   return (
     <div className='container-fluid'>

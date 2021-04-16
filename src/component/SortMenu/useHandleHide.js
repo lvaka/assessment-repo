@@ -1,10 +1,9 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 
-const useHandleHide = ({ active, setActive, sortOptionsRef, sortByReleaseDate, sortByTitle, showWishlist }) => {
+const useHandleHide = ({ active, sortOptionsRef }) => {
   const handleHide = () => {
     const tl = gsap.timeline()
-
     if (active) {
       tl.to(sortOptionsRef.current, {
         opacity: 0,
@@ -32,30 +31,9 @@ const useHandleHide = ({ active, setActive, sortOptionsRef, sortByReleaseDate, s
     })
   }
 
-  const handleSortByDate = (order = 'desc') => {
-    setActive(false)
-    sortByReleaseDate(order)
-  }
-
-  const handleSortByTitle = (order = 'desc') => {
-    setActive(false)
-    sortByTitle(order)
-  }
-
-  const handleFilterWishlist = () => {
-    setActive(false)
-    showWishlist()
-  }
-
   useEffect(() => {
     handleHide()
   }, [active])
-
-  return {
-    handleSortByDate,
-    handleSortByTitle,
-    handleFilterWishlist
-  }
 }
 
 export default useHandleHide
