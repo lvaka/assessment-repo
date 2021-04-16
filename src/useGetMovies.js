@@ -90,16 +90,22 @@ const useGetMovies = () => {
   }
 
   const sortWishlist = () => {
-    setSearch('')
+    // show only movies in list
+    const sortMethods = {
+      titleAsc: sortTitleAsc,
+      titleDesc: sortTitleDesc,
+      dateAsc: sortDateAsc,
+      dateDesc: sortDateDesc,
+      wishlist: () => movieList
+    }
 
+    setSearch('')
     const wishlist = JSON.parse(Cookies.get('wishlist'))
-    const sortedList = [].slice.call(movies).filter(movie => wishlist.includes(movie.title))
+    const sortedList = sortMethods[sortOrder]().filter(movie => wishlist.includes(movie.title))
     return sortedList
   }
 
   const showWishlist = () => {
-    // show only movies in list
-
     const sortedList = sortWishlist()
     setMovies(sortedList)
     setSortOrder('wishlist')
@@ -137,19 +143,20 @@ const useGetMovies = () => {
     return words.length === wordHitCount
   }
 
+  // Map of sort methods
+  const sortMethods = {
+    titleAsc: sortTitleAsc,
+    titleDesc: sortTitleDesc,
+    dateAsc: sortDateAsc,
+    dateDesc: sortDateDesc,
+    wishlist: sortWishlist
+  }
+
   const searchMovies = searchString => {
     /*
       This will search by search string.  It will filter through the list
       of movies.  It will compare the string to titles as well as date.
     */
-
-    const sortMethods = {
-      titleAsc: sortTitleAsc,
-      titleDesc: sortTitleDesc,
-      dateAsc: sortDateAsc,
-      dateDesc: sortDateDesc,
-      wishlist: sortWishlist
-    }
 
     const words = searchString.split(' ').map(word => word.toLowerCase())
     const sortedList = sortMethods[sortOrder]()
