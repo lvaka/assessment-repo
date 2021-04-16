@@ -1,0 +1,21 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 640px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1900px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 604px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1400px
+);
+
+$grid-gutter-width: 12px;
+$font-family-base: 'OpenSans', sans-serif;
+$body-color: #FFF;
+$body-bg: #000;

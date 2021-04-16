@@ -1,13 +1,19 @@
+import React from 'react'
 import Header from './component/Header'
-import './App.css';
+import Grid from './component/Grid'
+import useGetMovies from './useGetMovies'
+import './sass/app.scss'
+import './App.css'
 
+function App () {
+  const { movies } = useGetMovies()
 
-function App() {
   return (
-    <div className="app">
+    <div className='app'>
       <Header />
+      <Grid movies={movies} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
