@@ -58,6 +58,10 @@
         background:  #00cbfe;
         margin-bottom: 22px;
         cursor: pointer;
+        transition: transform 0.1s;
+        &:active{
+            transform: scale(0.9);
+        }
         &:hover{
             color: #8616d6;
             transition: 0.3s;

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 
-const useAnimateOnLoad = ({ ref, sortOrder }) => {
+const useAnimateOnLoad = ({ ref, sortOrder, lastSearch }) => {
   const animate = () => {
     const tl = gsap.timeline()
     const grid = ref.current
@@ -19,10 +19,10 @@ const useAnimateOnLoad = ({ ref, sortOrder }) => {
   }
 
   useEffect(() => {
-    if (ref?.current && sortOrder) {
+    if (ref?.current || sortOrder) {
       animate()
     }
-  }, [ref?.current, sortOrder])
+  }, [ref?.current, sortOrder, lastSearch])
 
   return null
 }

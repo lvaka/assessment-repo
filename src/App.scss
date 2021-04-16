@@ -6,3 +6,11 @@
     margin-bottom: 43px;
   }
 }
+
+@media (max-width: 640px) {
+    .app{
+        &__title{
+            margin-bottom: 2px;
+        }
+    }
+}

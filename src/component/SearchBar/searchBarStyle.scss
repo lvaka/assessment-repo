@@ -1,0 +1,40 @@
+.search{
+    display: flex;
+    width: 100%;
+    margin-bottom: 79px;
+
+    &__bar{
+        flex-grow: 1;
+        display: block;
+        margin-right: 15px;
+        height: 33px;
+        background: #d8d8db;
+        border-radius: 5px;
+        border: solid 1px #3d3d3d;
+    }
+
+    &__submit{
+        height: 28px;
+        width: 28px;
+        display: block;
+        background: none;
+        border: none;
+        transition: 0.1s;
+
+        &:active{
+            transform: scale(0.9);
+        }
+    }
+
+    &__icon{
+        width: 28px;
+        height: 28px;
+    }
+
+}
+
+@media (max-width: 640px){
+    .search{
+        margin-bottom: 15px
+    }
+}

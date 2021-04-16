@@ -5,10 +5,10 @@ import useAnimateOnLoad from './useAnimateOnLoad'
 import Card from './Card'
 import PropTypes from 'prop-types'
 
-const Grid = ({ movies, sortOrder, showWishlist }) => {
+const Grid = ({ movies, sortOrder, showWishlist, lastSearch }) => {
   const gridRef = useRef()
   const { wishlist, handleCardButton } = useAddWishlist({ sortOrder, showWishlist })
-  useAnimateOnLoad({ ref: gridRef, sortOrder: sortOrder })
+  useAnimateOnLoad({ ref: gridRef, sortOrder: sortOrder, lastSearch: lastSearch })
 
   return (
     <div className='grid container-fluid'>
@@ -31,7 +31,8 @@ const Grid = ({ movies, sortOrder, showWishlist }) => {
 Grid.propTypes = {
   movies: PropTypes.array,
   sortOrder: PropTypes.string,
-  showWishlist: PropTypes.func
+  showWishlist: PropTypes.func,
+  lastSearch: PropTypes.string
 }
 
 export default Grid

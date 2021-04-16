@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.05323974.chunk.css",
-    "main.js": "/static/js/main.513ece2d.chunk.js",
-    "main.js.map": "/static/js/main.513ece2d.chunk.js.map",
+    "main.css": "/static/css/main.3394ba33.chunk.css",
+    "main.js": "/static/js/main.8c61236d.chunk.js",
+    "main.js.map": "/static/js/main.8c61236d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0733fe2d.js",
     "runtime-main.js.map": "/static/js/runtime-main.0733fe2d.js.map",
-    "static/js/2.e10d0482.chunk.js": "/static/js/2.e10d0482.chunk.js",
-    "static/js/2.e10d0482.chunk.js.map": "/static/js/2.e10d0482.chunk.js.map",
+    "static/js/2.59f19afc.chunk.js": "/static/js/2.59f19afc.chunk.js",
+    "static/js/2.59f19afc.chunk.js.map": "/static/js/2.59f19afc.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.05323974.chunk.css.map": "/static/css/main.05323974.chunk.css.map",
-    "static/js/2.e10d0482.chunk.js.LICENSE.txt": "/static/js/2.e10d0482.chunk.js.LICENSE.txt",
+    "static/css/main.3394ba33.chunk.css.map": "/static/css/main.3394ba33.chunk.css.map",
+    "static/js/2.59f19afc.chunk.js.LICENSE.txt": "/static/js/2.59f19afc.chunk.js.LICENSE.txt",
     "static/media/121fdd6d-be66-4c3a-ab32-d2102c95202b.jpg": "/static/media/121fdd6d-be66-4c3a-ab32-d2102c95202b.47a049ba.jpg",
     "static/media/182eae84-827d-4330-8222-688fe77e516d.jpg": "/static/media/182eae84-827d-4330-8222-688fe77e516d.ba0b15c2.jpg",
     "static/media/1d6c6c73-ab1e-4453-969c-6a4e965ebb37.jpg": "/static/media/1d6c6c73-ab1e-4453-969c-6a4e965ebb37.59567c8e.jpg",
@@ -22,14 +22,15 @@
     "static/media/b4d369b0-c3fb-4097-8520-aef9ab3826ed.jpg": "/static/media/b4d369b0-c3fb-4097-8520-aef9ab3826ed.2f11da61.jpg",
     "static/media/bccc6601-d468-4b73-9a8e-f407bd0be191.jpg": "/static/media/bccc6601-d468-4b73-9a8e-f407bd0be191.b89d23fd.jpg",
     "static/media/e44e381b-c016-4fae-9361-690552e328f3.jpg": "/static/media/e44e381b-c016-4fae-9361-690552e328f3.e883ea28.jpg",
+    "static/media/search-glass.svg": "/static/media/search-glass.e3ac0ed4.svg",
     "static/media/these-movies-here.svg": "/static/media/these-movies-here.098dd964.svg",
     "static/media/vectors-caret-down.svg": "/static/media/vectors-caret-down.cebf1aea.svg",
     "static/media/vectors-check.svg": "/static/media/vectors-check.1c63e8d9.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0733fe2d.js",
-    "static/js/2.e10d0482.chunk.js",
-    "static/css/main.05323974.chunk.css",
-    "static/js/main.513ece2d.chunk.js"
+    "static/js/2.59f19afc.chunk.js",
+    "static/css/main.3394ba33.chunk.css",
+    "static/js/main.8c61236d.chunk.js"
   ]
 }
