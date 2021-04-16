@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Cookies from 'js-cookie'
 
-const useAddWishList = () => {
+const useAddWishList = ({ sortOrder, showWishlist }) => {
   const [wishlist, setWishlist] = useState([])
 
   const handleCardButton = title => {
@@ -23,6 +23,9 @@ const useAddWishList = () => {
   useEffect(() => {
     const jsonWishlist = JSON.stringify(wishlist)
     Cookies.set('wishlist', jsonWishlist)
+    if (sortOrder === 'wishlist') {
+      showWishlist()
+    }
   }, [wishlist])
 
   return {

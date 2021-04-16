@@ -4,7 +4,8 @@ const options = {
   dateDesc: 'Release Date - By Newest',
   dateAsc: 'Release Date - By Oldest',
   titleAsc: 'A - Z',
-  titleDesc: 'Z - A'
+  titleDesc: 'Z - A',
+  wishlist: 'Items in My Wishlist'
 }
 
 const useSetSort = ({ sortOrder }) => {

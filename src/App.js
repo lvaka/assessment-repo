@@ -7,7 +7,7 @@ import './sass/app.scss'
 import './App.scss'
 
 function App () {
-  const { movies, sortOrder, sortByReleaseDate, sortByTitle } = useGetMovies()
+  const { movies, sortOrder, sortByReleaseDate, sortByTitle, showWishlist } = useGetMovies()
 
   return (
     <div className='app'>
@@ -19,8 +19,9 @@ function App () {
         sortOrder={sortOrder}
         sortByReleaseDate={sortByReleaseDate}
         sortByTitle={sortByTitle}
+        showWishlist={showWishlist}
       />
-      <Grid movies={movies} sortOrder={sortOrder} />
+      <Grid movies={movies} sortOrder={sortOrder} showWishlist={showWishlist} />
     </div>
   )
 }

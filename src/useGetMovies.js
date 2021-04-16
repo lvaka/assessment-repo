@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import movieList from './data.json'
+import Cookies from 'js-cookie'
 
 const useGetMovies = () => {
   const [movies, setMovies] = useState([])
@@ -56,6 +57,13 @@ const useGetMovies = () => {
 
   const showWishlist = () => {
     // show only movies in list
+
+    const wishlist = JSON.parse(Cookies.get('wishlist'))
+    const sortedList = [].slice.call(movieList).sort((a, b) => {
+      return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1
+    }).filter(movie => wishlist.includes(movie.title))
+    setMovies(sortedList)
+    setSortOrder('wishlist')
   }
 
   useEffect(() => getMovies(), [])

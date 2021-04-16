@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 
-const useHandleHide = ({ active, sortOptionsRef, sortByReleaseDate, sortByTitle, setActive }) => {
+const useHandleHide = ({ active, setActive, sortOptionsRef, sortByReleaseDate, sortByTitle, showWishlist }) => {
   const handleHide = () => {
     const tl = gsap.timeline()
 
@@ -41,13 +41,20 @@ const useHandleHide = ({ active, sortOptionsRef, sortByReleaseDate, sortByTitle,
     setActive(false)
     sortByTitle(order)
   }
+
+  const handleFilterWishlist = () => {
+    setActive(false)
+    showWishlist()
+  }
+
   useEffect(() => {
     handleHide()
   }, [active])
 
   return {
     handleSortByDate,
-    handleSortByTitle
+    handleSortByTitle,
+    handleFilterWishlist
   }
 }
 

@@ -5,9 +5,9 @@ import useAnimateOnLoad from './useAnimateOnLoad'
 import Card from './Card'
 import PropTypes from 'prop-types'
 
-const Grid = ({ movies, sortOrder }) => {
+const Grid = ({ movies, sortOrder, showWishlist }) => {
   const gridRef = useRef()
-  const { wishlist, handleCardButton } = useAddWishlist()
+  const { wishlist, handleCardButton } = useAddWishlist({ sortOrder, showWishlist })
   useAnimateOnLoad({ ref: gridRef, sortOrder: sortOrder })
 
   return (
@@ -30,7 +30,8 @@ const Grid = ({ movies, sortOrder }) => {
 }
 Grid.propTypes = {
   movies: PropTypes.array,
-  sortOrder: PropTypes.string
+  sortOrder: PropTypes.string,
+  showWishlist: PropTypes.func
 }
 
 export default Grid

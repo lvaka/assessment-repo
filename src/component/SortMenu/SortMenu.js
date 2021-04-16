@@ -5,12 +5,16 @@ import useHandleActivate from './useHandleActivate'
 import useHandleHide from './useHandleHide'
 import PropTypes from 'prop-types'
 
-const SortMenu = ({ sortOrder, sortByReleaseDate, sortByTitle }) => {
+const SortMenu = ({ sortOrder, sortByReleaseDate, sortByTitle, showWishlist }) => {
   const sortOptionsRef = useRef()
   const [active, setActive] = useState(false)
   const { sortOption, options } = useSetSort({ sortOrder })
   const handleClick = useHandleActivate({ active, setActive })
-  const { handleSortByDate, handleSortByTitle } = useHandleHide({ active, sortOptionsRef, sortByReleaseDate, sortByTitle, setActive })
+  const {
+    handleSortByDate,
+    handleSortByTitle,
+    handleFilterWishlist
+  } = useHandleHide({ active, setActive, sortOptionsRef, sortByReleaseDate, sortByTitle, showWishlist })
 
   return (
     <div className='container-fluid'>
@@ -46,6 +50,12 @@ const SortMenu = ({ sortOrder, sortByReleaseDate, sortByTitle }) => {
           >
             {options.titleDesc}
           </li>
+          <li
+            className={sortOrder === 'wishlist' ? 'sortmenu__item sortmenu__item--active' : 'sortmenu__item'}
+            onClick={handleFilterWishlist}
+          >
+            {options.wishlist}
+          </li>
         </ul>
       </div>
     </div>
@@ -54,7 +64,8 @@ const SortMenu = ({ sortOrder, sortByReleaseDate, sortByTitle }) => {
 SortMenu.propTypes = {
   sortOrder: PropTypes.string,
   sortByTitle: PropTypes.func,
-  sortByReleaseDate: PropTypes.func
+  sortByReleaseDate: PropTypes.func,
+  showWishlist: PropTypes.func
 }
 
 export default SortMenu
