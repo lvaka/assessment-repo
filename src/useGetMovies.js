@@ -3,23 +3,55 @@ import movieList from './data.json'
 
 const useGetMovies = () => {
   const [movies, setMovies] = useState([])
+  const [sortOrder, setSortOrder] = useState()
 
   const getMovies = () => {
     // This should be an AJAX call to API to get list of movies
 
-    setMovies(movieList)
+    sortByReleaseDate()
   }
 
   const searchMovies = searchString => {
     // This should filter by search string
   }
 
-  const sortByTitles = (title, order = 'asc') => {
+  const sortByTitle = (order = 'asc') => {
     // sort movies by list. order should === 'asc' or 'desc'
+
+    if (order === 'asc') {
+      const sortedList = [].slice.call(movieList).sort((a, b) => {
+        return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1
+      })
+      setMovies(sortedList)
+      setSortOrder('titleAsc')
+      return
+    }
+    const sortedList = [].slice.call(movieList).sort((a, b) => {
+      return a.title.toLowerCase() > b.title.toLowerCase() ? -1 : 1
+    })
+    setMovies(sortedList)
+    setSortOrder('titleDesc')
   }
 
-  const sortByReleaseDate = (order = 'asc') => {
+  const sortByReleaseDate = (order = 'desc') => {
     // sort by date.  order should === 'asc' or 'desc'
+    if (order === 'asc') {
+      const sortedList = [].slice.call(movieList).sort((a, b) => {
+        const aDate = new Date(a.releaseDate)
+        const bDate = new Date(b.releaseDate)
+        return aDate - bDate
+      })
+      setMovies(sortedList)
+      setSortOrder('dateAsc')
+      return
+    }
+    const sortedList = [].slice.call(movieList).sort((a, b) => {
+      const aDate = new Date(a.releaseDate)
+      const bDate = new Date(b.releaseDate)
+      return bDate - aDate
+    })
+    setMovies(sortedList)
+    setSortOrder('dateDesc')
   }
 
   const showWishlist = () => {
@@ -31,10 +63,11 @@ const useGetMovies = () => {
   return {
     movies,
     searchMovies,
-    sortByTitles,
+    sortByTitle,
     sortByReleaseDate,
     showWishlist,
-    getMovies
+    getMovies,
+    sortOrder
   }
 }
 

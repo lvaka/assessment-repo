@@ -1,0 +1,73 @@
+.sortmenu{
+    text-align: right;
+    position: relative;
+
+    &__selection{
+        display: inline-block;
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #00cbfe;
+        font-weight: 300;
+        cursor: pointer;
+        overflow: hidden;
+
+        &::after{
+            content: '';
+            background-image: url('../../assets/vectors-caret-down.svg');
+            background-size: 10px 10px;
+            height: 10px;
+            width: 10px;
+            display: inline-block;
+            margin-left: 0.5rem;
+            transform: rotate(180deg);
+            transition: 0.3s;
+        }
+        &--active{
+            &::after{
+                content: '';
+                background-image: url('../../assets/vectors-caret-down.svg');
+                background-size: 10px 10px;
+                height: 10px;
+                width: 10px;
+                display: inline-block;
+                margin-left: 0.5rem;
+                transition: 0.3s;
+                transform: rotate(0);
+            }
+        }
+    }
+
+    &__options{
+        list-style: none;
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        transform: translateY(140%);
+        padding: 5px 6px;
+        right: 0;
+        z-index: 3;
+        background-color: #181a1d;
+
+    }
+    &__item{
+        font-size: 11px;
+        text-align: left;
+        font-weight: 300;
+        cursor: pointer;
+
+        &--active{
+            text-align: left;
+            font-size: 11px;
+            font-weight: 300;
+            &::after{
+                content: '';
+                background-image: url('../../assets/vectors-check.svg');
+                background-size: 8px 8px;
+                height: 8px;
+                width: 8px;
+                display: inline-block;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}
