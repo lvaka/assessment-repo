@@ -11,10 +11,7 @@ on completeness and quality of the individual users stories, not the number of s
 
 You will have a 24-hour period to work through the stories, but you are only expected to spend 
 about 2 hours on the project. After the 24-hour period has expired, you will lose access to the 
-repository, therefore it is recommended that you commit changes to your repository often. 
-
-Note on the mocks. They are there for guidance but feel free take the opportunity to add some of
-your personal flair. Transitions and animations are all fair game.  
+repository, therefore it is recommended that you commit changes to your repository often.
 
 ## Box Art Grid Feature
 
