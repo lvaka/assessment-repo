@@ -4,19 +4,31 @@ import Cookies from 'js-cookie'
 import moment from 'moment'
 
 const useGetMovies = () => {
+  /**
+    * Description: Custom React Hook to handle getting, sorting, and
+    * filtering of moviewsxz
+    * @return {array} sortedList
+  */
+
   const [movies, setMovies] = useState([])
   const [sortOrder, setSortOrder] = useState()
   const [lastSearch, setLastSearch] = useState()
   const [search, setSearch] = useState('')
 
   const getMovies = () => {
-    // This should be an AJAX call to API to get list of movies
+    /**
+     * Description: Should be ajax call to API in production
+     * @return {null}
+    */
 
     sortByReleaseDate()
   }
 
   const sortTitleAsc = () => {
-    // Sorts by title in ascending order. Returns sorted list.
+    /**
+     * Description: Sort movie list by title in ascending order
+     * @return {array} sortedList
+    */
 
     const sortedList = [].slice.call(movieList).sort((a, b) => {
       return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1
@@ -26,7 +38,10 @@ const useGetMovies = () => {
   }
 
   const sortTitleDesc = () => {
-    // Sorts by title in descending order. Returns sorted list.
+    /**
+     * Description: Sort movie list by title in descending order
+     * @return {array} sortedList
+    */
 
     const sortedList = [].slice.call(movieList).sort((a, b) => {
       return a.title.toLowerCase() > b.title.toLowerCase() ? -1 : 1
@@ -36,7 +51,11 @@ const useGetMovies = () => {
   }
 
   const sortByTitle = (order = 'asc') => {
-    // sort movies by list. order should === 'asc' or 'desc'
+    /**
+     * Description: Sort movies by title
+     * @param {string} order either 'asc' or 'desc' for direction of sort
+     * @return {null}
+    */
 
     setSearch('')
 
@@ -52,7 +71,10 @@ const useGetMovies = () => {
   }
 
   const sortDateAsc = () => {
-    // Sorts by Date in Ascending Order. Returns sorted list.
+    /**
+     * Description: Sort movie list by date in ascending order
+     * @return {array} sortedList
+    */
     const sortedList = [].slice.call(movieList).sort((a, b) => {
       const aDate = new Date(a.releaseDate)
       const bDate = new Date(b.releaseDate)
@@ -63,7 +85,10 @@ const useGetMovies = () => {
   }
 
   const sortDateDesc = () => {
-    // Sorts by Date in Descending Order.  Returns sorted list.
+    /**
+     * Description: Sort movie list by date in descending order
+     * @return {array} sortedList
+    */
     const sortedList = [].slice.call(movieList).sort((a, b) => {
       const aDate = new Date(a.releaseDate)
       const bDate = new Date(b.releaseDate)
@@ -74,7 +99,11 @@ const useGetMovies = () => {
   }
 
   const sortByReleaseDate = (order = 'desc') => {
-    // sort by date.  order should === 'asc' or 'desc'
+    /**
+     * Description: Sort Movies by Release Date
+     * @param {string} order direction of sort
+     * @return {null}
+    */
 
     setSearch('')
 
@@ -90,7 +119,10 @@ const useGetMovies = () => {
   }
 
   const sortWishlist = () => {
-    // show only movies in list
+    /**
+     * Description: Will sort movies by current sort method and return filtered list
+     * @return {array} sortedList movies filtered by what's in the wishlist.
+    */
     const sortMethods = {
       titleAsc: sortTitleAsc,
       titleDesc: sortTitleDesc,
@@ -106,13 +138,22 @@ const useGetMovies = () => {
   }
 
   const showWishlist = () => {
+    /**
+     * Description: Chains functions to sort set wishlist
+     * @return {null}
+    */
     const sortedList = sortWishlist()
     setMovies(sortedList)
     setSortOrder('wishlist')
   }
 
   const wordsInTitle = (words, title) => {
-    // Checks to see if words are in title.
+    /**
+     * Description: Search if words are found in the movie title
+     * @param {array} words list of words to search for
+     * @param {string} title in YYYY-MM-DD string format
+     * @return {bool} whether user search is within the date of the movie
+    */
     let wordHitCount = 0
 
     for (const word of words) {
@@ -125,7 +166,12 @@ const useGetMovies = () => {
   }
 
   const wordsInDate = (words, date) => {
-    // Checks to see if the words are in the date of movie
+    /**
+     * Description: Search if words are found in date
+     * @param {array} words list of words to search for
+     * @param {string} date in YYYY-MM-DD string format
+     * @return {bool} whether user search is within the date of the movie
+    */
 
     let wordHitCount = 0
     const dateTime = moment(date).format('MMMM D, YYYY').toLowerCase()
@@ -153,9 +199,10 @@ const useGetMovies = () => {
   }
 
   const searchMovies = searchString => {
-    /*
-      This will search by search string.  It will filter through the list
-      of movies.  It will compare the string to titles as well as date.
+    /**
+     * Description: Searches List of Movies by Title and Date
+     * @param {string} searchString The user's search query
+     * @return {null}
     */
 
     const words = searchString.split(' ').map(word => word.toLowerCase())
