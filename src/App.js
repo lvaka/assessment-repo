@@ -8,6 +8,10 @@ import './sass/app.scss'
 import './App.scss'
 
 function App () {
+  /**
+    * Description: Parent Component of App
+    * @return {React.FC}
+  */
   const {
     movies,
     searchMovies,

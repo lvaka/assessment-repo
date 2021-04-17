@@ -6,8 +6,8 @@ import moment from 'moment'
 const useGetMovies = () => {
   /**
     * Description: Custom React Hook to handle getting, sorting, and
-    * filtering of moviewsxz
-    * @return {array} sortedList
+    * filtering of movies
+    * @return {object} collection of closures to use outside of hook
   */
 
   const [movies, setMovies] = useState([])
