@@ -8,11 +8,21 @@ const useSearch = ({ searchMovies, search, setSearch }) => {
   */
 
   const handleSubmit = e => {
+  /**
+    * Description: cancels default event handler and handles form submit on search bar.  Initiate Search
+    * @param {event} event handler.
+    * @return {null}
+  */
     e.preventDefault()
     searchMovies(search)
   }
 
   const handleUpdateSearch = e => {
+  /**
+    * Description: Update state of current Search Input value
+    * @param {event} event handler.
+    * @return {null}
+  */
     const searchInput = e.target.value
     setSearch(searchInput)
   }
